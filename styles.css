@@ -38,12 +38,12 @@ header img {
     }
 
     .puffin-img {
-        width: 100%; /* Ensure image is 100% of the viewport width */
-        max-width: 100vw; /* Constrain to the viewport width */
+        width: 100%; /* Ensure the image takes up the full width */
+        max-width: 100vw; /* Restrict image to viewport width */
         height: auto; /* Maintain aspect ratio */
         display: block;
         margin: 20px 0;
-        object-fit: contain; /* Ensure the image fits within its container */
+        object-fit: cover; /* Ensure the image covers the space properly */
     }
 
     .sidebar {
@@ -52,7 +52,7 @@ header img {
     }
 
     .main-content {
-        text-align: left; /* Left-align the text for better readability */
+        text-align: left; /* Align the text to the left for better readability */
         padding: 10px;
     }
 }
@@ -74,7 +74,7 @@ header img {
     /* Puffin image and text side by side */
     .main-content {
         display: flex;
-        flex-direction: row; /* Align side by side */
+        flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
         flex-wrap: nowrap;
@@ -86,7 +86,7 @@ header img {
     }
 
     .main-content p {
-        margin-left: 15px; /* Additional margin between text and image for readability */
+        margin-left: 15px; /* Additional margin between text and image */
     }
 
     .sidebar {
@@ -106,8 +106,8 @@ header img {
 
     .sidebar {
         flex: 1;
-        margin-left: 30px; /* Add more space between sidebar and main content */
-        padding: 20px; /* Optional: increase padding for better readability */
+        margin-left: 30px; /* Add space between sidebar and main content */
+        padding: 20px;
     }
 
     .main-content {
@@ -116,7 +116,10 @@ header img {
     }
 
     .puffin-img {
-        max-width: 300px; /* Restrict the size of the puffin image on larger screens */
+        max-width: 100%; /* Allow the puffin image to scale with the container */
+        width: 100%; /* Ensure the image fills the width of its container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image covers the available space */
     }
 }
 
@@ -132,13 +135,13 @@ footer {
     background-color: #d9043d;
     color: white;
     text-align: center;
-    padding: 40px 20px; /* Add more padding for consistency across devices */
-    font-size: 1.1em; /* Slightly larger font for readability */
+    padding: 40px 20px; /* Add more padding for consistency */
+    font-size: 1.1em;
 }
 
 /* Hover Effects for Links */
 a:hover {
-    color: #d9043d; /* Change color on hover */
-    text-decoration: underline; /* Optional */
+    color: #d9043d;
+    text-decoration: underline;
 }
 
