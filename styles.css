@@ -1,0 +1,126 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #120323;
+    color: #97bf04;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    max-width: 100px;
+}
+
+/* Mobile Layout: Single Column (Under 768px) */
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .puffin-img {
+        width: 100%;
+        max-width: none;
+        display: block;
+        margin: 20px 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .main-content {
+        text-align: center;
+    }
+}
+
+/* Tablet Layout (Under 1000px) */
+@media (max-width: 1000px) and (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .puffin-img {
+        max-width: 300px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .main-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* Desktop Layout (1000px and Above) */
+@media (min-width: 1000px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .sidebar {
+        flex: 1;
+        margin-left: 20px;
+    }
+
+    .main-content {
+        flex: 3;
+        margin-right: 20px;
+    }
+
+    .puffin-img {
+        max-width: 300px;
+    }
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #97bf04;
+    padding: 20px;
+    color: black;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #d9043d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
