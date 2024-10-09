@@ -83,6 +83,10 @@ header img {
         margin-right: 20px; /* Add space between the image and text */
     }
 
+    .main-content p {
+        margin-left: 10px; /* Additional margin between image and text for readability */
+    }
+
     .sidebar {
         width: 100%;
         margin-top: 20px; /* Ensure the sidebar moves below the main content */
@@ -126,5 +130,5 @@ footer {
     background-color: #d9043d;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px; /* Add more padding for consistency across devices */
 }
