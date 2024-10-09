@@ -83,6 +83,7 @@ footer {
 
     .text-content {
         width: 50%; /* Text takes the remaining half */
+        padding-left: 15px; /* Add padding for better readability */
     }
 
     .sidebar {
@@ -97,6 +98,7 @@ footer {
         flex-direction: row; /* Sidebar moves to the side */
         justify-content: space-between;
         align-items: flex-start;
+        gap: 30px; /* Add space between the sidebar and main content */
     }
 
     .main-content {
@@ -115,4 +117,5 @@ footer {
         height: auto;
     }
 }
+
 
