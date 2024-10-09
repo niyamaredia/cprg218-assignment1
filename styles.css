@@ -38,12 +38,12 @@ header img {
     }
 
     .puffin-img {
-        width: 100%; /* Ensure the image takes up the full width */
-        max-width: 100vw; /* Restrict image to viewport width */
+        width: 100%; /* Ensure image takes up the full width of the viewport */
+        max-width: 100vw; /* Constrain to the viewport width */
         height: auto; /* Maintain aspect ratio */
         display: block;
         margin: 20px 0;
-        object-fit: cover; /* Ensure the image covers the space properly */
+        object-fit: contain; /* Ensure the image is properly contained */
     }
 
     .sidebar {
@@ -52,12 +52,12 @@ header img {
     }
 
     .main-content {
-        text-align: left; /* Align the text to the left for better readability */
+        text-align: left; /* Left-align the text for better readability */
         padding: 10px;
     }
 }
 
-/* Tablet Layout (Under 1000px) */
+/* Tablet Layout (768px - 1000px) */
 @media (max-width: 1000px) and (min-width: 768px) {
     .container {
         display: flex;
@@ -77,21 +77,19 @@ header img {
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 
     .puffin-img {
-        max-width: 300px; /* Limit the size of the puffin image */
+        max-width: 100%; /* Take up full width in the container */
+        flex: 1; /* Allow image to take up available space */
+        height: auto; /* Maintain aspect ratio */
         margin-right: 20px; /* Add space between the image and text */
-    }
-
-    .main-content p {
-        margin-left: 15px; /* Additional margin between text and image */
     }
 
     .sidebar {
         width: 100%;
-        margin-top: 25px; /* Ensure the sidebar moves below the main content */
+        margin-top: 25px;
     }
 }
 
@@ -104,22 +102,26 @@ header img {
         align-items: flex-start;
     }
 
-    .sidebar {
-        flex: 1;
-        margin-left: 30px; /* Add space between sidebar and main content */
-        padding: 20px;
-    }
-
     .main-content {
+        display: flex;
+        flex-direction: row;
         flex: 3;
-        margin-right: 20px;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
     .puffin-img {
-        max-width: 100%; /* Allow the puffin image to scale with the container */
-        width: 100%; /* Ensure the image fills the width of its container */
+        width: 100%; /* Ensure image uses full width */
+        max-width: 600px; /* Limit maximum width for better alignment */
         height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Ensure the image covers the available space */
+        flex: 1; /* Allow it to take up space properly */
+        object-fit: cover; /* Make sure image covers the available space */
+    }
+
+    .sidebar {
+        flex: 1;
+        margin-left: 30px; /* Space between main content and sidebar */
+        padding: 20px;
     }
 }
 
@@ -140,8 +142,5 @@ footer {
 }
 
 /* Hover Effects for Links */
-a:hover {
-    color: #d9043d;
-    text-decoration: underline;
-}
+a
 
