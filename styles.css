@@ -38,8 +38,9 @@ header img {
     }
 
     .puffin-img {
-        width: 100%;
-        max-width: none;
+        width: 100%; /* Ensure image is 100% of the viewport width */
+        max-width: 100%; /* Prevent the image from exceeding the screen width */
+        height: auto; /* Maintain aspect ratio */
         display: block;
         margin: 20px 0;
     }
@@ -84,12 +85,12 @@ header img {
     }
 
     .main-content p {
-        margin-left: 10px; /* Additional margin between image and text for readability */
+        margin-left: 15px; /* Additional margin between text and image for readability */
     }
 
     .sidebar {
         width: 100%;
-        margin-top: 20px; /* Ensure the sidebar moves below the main content */
+        margin-top: 25px; /* Ensure the sidebar moves below the main content */
     }
 }
 
@@ -130,5 +131,13 @@ footer {
     background-color: #d9043d;
     color: white;
     text-align: center;
-    padding: 30px 20px; /* Add more padding for consistency across devices */
+    padding: 40px 20px; /* Add more padding for consistency across devices */
+    font-size: 1.1em; /* Slightly larger font for readability */
 }
+
+/* Hover Effects for Links */
+a:hover {
+    color: #d9043d; /* Change color on hover */
+    text-decoration: underline; /* Optional */
+}
+
