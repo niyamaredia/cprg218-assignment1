@@ -115,7 +115,7 @@ header img {
         max-width: 600px; /* Limit maximum width for better alignment */
         height: auto; /* Maintain aspect ratio */
         flex: 1; /* Allow it to take up space properly */
-        object-fit: cover; /* Make sure image covers the available space */
+        object-fit: centre; /* Make sure image covers the available space */
     }
 
     .sidebar {
@@ -142,5 +142,8 @@ footer {
 }
 
 /* Hover Effects for Links */
-a
+a:hover {
+    color: #d9043d;
+    text-decoration: underline;
+}
 
